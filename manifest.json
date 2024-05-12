@@ -1,0 +1,7 @@
+{
+    "name": "biotic",
+    "short_name": "abiotic",
+    "start_url": "/ecosystem/",
+    "display": "standalone",
+    "orientation": "portrait"
+}

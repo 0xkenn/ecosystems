@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Module 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="/images/coca-leaves.png">
+ 
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="./css/animate.css">
+	
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="./css/magnific-popup.css">
+	<link rel="stylesheet" href="./module/style.css">
+	
+
+
+	
+	<link rel="stylesheet" href="./css/flaticon.css">
+	<link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  
+      <style>
+           
+            .dropzone {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 34px;
+                border: 2px solid #3f942e;
+                border-radius: 10px;
+                transition: transform 0.5s;
+                margin: 10px;
+                color: #3f942e;
+            }
+            .dropzone.dragover {
+                transform: scale(0.9);
+            }
+
+        
+            /* Part 3 */
+
+            .interact.dropzone {
+                width: 400px;
+                height: 300px;
+                transition: background-color 0.5s;
+            }
+            
+            .drop-target {
+                background-color: #BCF8B9;
+            }
+
+            .drop-target-false {
+                background-color: #ff0000;
+            }
+
+            .container-fluid {
+              background-color: #c5e1c4;
+              transition: ease-in-out .4s;
+              
+                text-align: center; /* Center align the content within the container */
+                padding: 20px; /* Add some padding for spacing */
+            }
+
+
+            .fluid{
+              color: black;
+              transition: ease-in-out .4s;
+            }
+            
+            .draggable {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 34px;
+                border: 2px solid #3f942e;
+                /* background-color: #94DBFD; */
+                border-radius: 10px;
+                height: 120px;
+                width: 120px;
+                margin-bottom: 10px;
+                touch-action: none;
+                margin-left: 1px;
+            }
+
+     
+
+  
+
+            @media only screen and (max-width: 600px) {
+                .draggable {
+                height: 50px;
+                width: 70px;
+            }
+
+            
+}
+            .draggable.can-drop {
+                background-color: #67D967;
+            }
+            .draggable.cant-drop {
+                background-color: #fb0000;
+            }
+
+            .lobster-regular {
+              font-family: "Lobster", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+            }
+
+            .services-section img {
+              max-width: 100%;
+              height: auto;
+              display: block;
+              margin: 0 auto;
+              padding: 0;
+            }
+
+            .services-section .container {
+              max-width: 800px; /* Set a maximum width for the container */
+              text-align: center; /* Center-align the text within the container */
+            }
+
+
+            p.with-border {
+              border: 1px solid #000; /* Set border properties: 1px solid black */
+              padding: 10px; /* Add padding inside the border */
+              background-color: transparent; /* Make the background transparent */
+              color: black;
+              transition: ease-in-out .4s;
+            }
+            label{
+		position: absolute;
+		width: 45px;
+		height: 25px;
+		
+		border: 2px solid;
+		border-radius: 20px;
+		border-color: #4dc235;
+	  }
+
+	  label::before{
+		position: absolute;
+		content: "";
+		width: 18px;
+		height: 18px;
+		left: 1px;
+		top: 1px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: #4dc235;
+		border-radius: 20px;
+		transition: 0.4s;
+	  }
+
+	  label.active:before{
+		left: 22px;
+	  }
+
+    .button {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 0.3rem; /* Rounded border radius */
+  background-color: #3f942e;
+  color: #fff; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+  /* Optional: Add box shadow for a subtle effect */
+  
+}
+
+/* Hover effect */
+.button:hover {
+	transition: ease-in-out .1s;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);/* Darken the background color on hover */
+  color: black; 
+}
+
+.button:active {
+  background-color: #3f942e; /* Change to a darker color when button is pressed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow to give a pressed effect */
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="./index.html">Biotic and Abiotic<span>ecosystem</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="./index.html" class="nav-link">Home</a></li>
+					<li class="nav-item active"><a href="#" class="nav-link">Get Started</a></li>
+	
+          <li class="nav-item"><a class="nav-link"><label id="dark-change" ></label></a></li>
+					<li class="nav-item"><a class="nav-link"></a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+ <!-- END nav -->
+ 
+ <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('./images/drag_drop.png');">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+      <div class="col-md-9 ftco-animate pb-5 text-center">
+       <p class="breadcrumbs"><span class="mr-2"><a href="./index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Get Started <i class="fa fa-chevron-right"></i></span></p>
+       <h1 class="mb-0 bread">What I Know?</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+ 
+<div class="container-fluid ">
+  <div class="ftco-animate">
+    <h1 class="text-center mb-0 " style="color: #3f942e;">GROUP ME!</h1>  
+    <p class="text-center fluid"> Directions: Drag and drop the photo onto the designated area that you think corresponds to its correct location.</p>
+    
+      <img class="draggable itemA"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture2.jpg" alt="">
+      <img class="draggable itemA"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture3.jpg" alt="">
+      <img class="draggable itemB"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture4.jpg" alt="">
+      <img class="draggable itemB"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture5.jpg" alt="">
+      <img class="draggable itemA"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture6.jpg" alt="">
+      <img class="draggable itemB"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture7.jpg" alt="">
+      <img class="draggable itemA"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture8.jpg" alt="">
+      <img class="draggable itemB"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture9.png" alt="">
+      <img class="draggable itemB"  src="./quiz/drag-and-drop/drag-and-drop-img/Picture10.jpg" alt="">
+  
+      <div style="display: flex; justify-content: center; color: black; font-weight: bold;">
+        <div id="dropzoneA" class="interact dropzone text" style="justify-content: center;
+        align-items: center; 
+        "><p>Biotic</p></div>
+      <div id="dropzoneB" class="interact dropzone" ><p>Abiotic</p></div>
+      </div>
+  
+      <br><br><br>
+  </div>
+</div>
+
+
+
+
+<section class="ftco-section services-section" >
+  <div class="container ftco-animate" >
+        <div class="w-100">
+          <img style="height: 240px; width: auto;" src="teacher.png">
+          <p class="with-border fluid"> Yes, you're right. Those are components of an ecosystem. The biotic and abiotic components.</p>
+          <p><a href="./mod.html" class="button py-3 px-4">So what is an Ecosystem?</a></p>
+        </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="main-footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                  <div class="logo-widget footer-widget">
+                      <figure class="logo-box"><a href="#"><h3 style="color: #fff;"><b>Disclaimer</b></h3></a></figure>
+                      <div class="text">
+                          <p>This learning material includes ideas, graphics, and pictures sourced from various individuals and organizations for educational purposes. Efforts have been made to ensure that proper credit is given to the original creators. The authors do not represent nor claim ownership over them.</p>
+                      </div>
+                      <ul class="footer-social">
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                          <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+             
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                  <div class="contact-widget footer-widget">
+                      <div class="footer-title">Contacts</div>
+                      <div class="text">
+                          
+                          <p>+63 00000000</p>
+                          <p>pogi.freelance@gmail.com</p>
+          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- main-footer end -->
+<div class="footer-bottom">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 column">
+              <div class="copyright"><a href="#">0xkenn Jet</a> &copy; 2019 All Right Reserved</div>
+          </div>
+         
+      </div>
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a056a765ce.js" crossorigin="anonymous"></script> <!--fonts-->
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<script src="./module/level.js"></script>
+<script src="./quiz/drag-and-drop/drag-and-drop.js"></script>
+
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery-migrate-3.0.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.easing.1.3.js"></script>
+<script src="./js/jquery.waypoints.min.js"></script>
+<script src="./js/jquery.stellar.min.js"></script>
+<script src="./js/owl.carousel.min.js"></script>
+<script src="./js/jquery.magnific-popup.min.js"></script>
+<script src="./js/jquery.animateNumber.min.js"></script>
+<script src="./js/scrollax.min.js"></script>
+<script src="./js/main.js"></script>
+
+
+<script>
+  // Function to toggle dark mode styles
+  function toggleDarkMode() {
+    var darkModeToggle = document.getElementById('dark-change');
+    var section2 = document.querySelector('.ftco-section');
+    var section = document.querySelector('body');
+    var Sersection = document.querySelector('.container-fluid');
+    var Sersectiontext = document.querySelectorAll('.fluid');
+    var bordercolor = document.querySelector('p.with-border');
+
+    // Toggle dark mode based on the active class of the toggle button
+    if (darkModeToggle.classList.contains('active')) {
+      // Dark mode is active: apply styles for dark mode
+     
+      Sersection.style.backgroundColor = '#323b2a';
+      
+      section2.style.backgroundColor = '#323b2a';// Apply filter-style class to navbar
+      section.style.backgroundColor = '#323b2a';
+      bordercolor.style.border = '1px solid white';
+
+      Sersectiontext.forEach(function(text) {
+        text.style.color = 'white';
+				});
+
+
+    } else {
+      // Dark mode is inactive: revert styles to default
+      
+      Sersection.style.backgroundColor = '';
+      
+      
+      section2.style.backgroundColor = '';// Remove filter-style class from navbar
+      section.style.backgroundColor = '';
+      bordercolor.style.border = '1px solid black';
+      Sersectiontext.forEach(function(text) {
+        text.style.color = '';
+				});
+
+  
+    }
+  }
+
+  var darkModeToggle = document.getElementById('dark-change');
+			// Event listener for dark mode toggl
+			darkModeToggle.addEventListener('click', function() {
+
+				darkModeToggle.classList.toggle('active');
+				var isDark = darkModeToggle.classList.contains('active');
+				localStorage.setItem('isDark', isDark);
+				toggleDarkMode();
+
+			});
+
+			// On page load, check local storage for dark mode preference
+			document.addEventListener('DOMContentLoaded', function() {
+				var isDark = localStorage.getItem('isDark') === 'true';
+				if (isDark) {
+					darkModeToggle.classList.add('active');
+					
+				}
+				toggleDarkMode(); 
+			});
+
+</script>
+
+
+</body>
+</html>

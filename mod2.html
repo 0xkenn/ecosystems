@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="icon" type="image/png" href="/images/coca-leaves.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/animate.css">
+  
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  
+  <link rel="stylesheet" href="./css/flaticon.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+  <link rel="stylesheet" href="./module/style.css">
+  <link rel="stylesheet" href="./module/modal.css">
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Module 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+    
+    .content-container {
+  text-align: center; /* Center align the content horizontally */
+  padding: 20px; /* Add padding for spacing */
+}
+     
+     
+    .module2-section  {
+      background-color: #c5e1c4;
+      margin: auto;
+    }
+   
+          
+          
+           .lobster-regular {
+ font-family: "Lobster", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+           }
+    
+    .w-col{
+      color: black ;
+    }
+
+    .scrolldrag
+    {
+      border-radius: 0.2rem;
+      box-shadow: 0 8px 16px 0 rgba(102, 100, 100, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .scrolldrag {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+
+  color: #fff; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+  /* Optional: Add box shadow for a subtle effect */
+  
+}
+
+/* Hover effect */
+.scrolldrag:hover {
+	transition: ease-in-out .1s;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);/* Darken the background color on hover */
+  color: black; 
+}
+
+.scrolldrag:active {
+  background-color:  rgba(0, 0, 0, 0.5); /* Change to a darker color when button is pressed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow to give a pressed effect */
+}
+.images { 
+  display: flex; 
+  flex-wrap: wrap; 
+  margin: 0 50px; 
+  padding: 30px; 
+} 
+
+.photo { 
+  max-width: 31.333%; 
+  padding: 0 10px; 
+  height: 240px; 
+} 
+
+.photo img { 
+  width: 100%; 
+  height: 100%; 
+} 
+
+label{
+		position: absolute;
+		width: 45px;
+		height: 25px;
+		
+		border: 2px solid;
+		border-radius: 20px;
+		border-color: #4dc235;
+	  }
+
+	  label::before{
+		position: absolute;
+		content: "";
+		width: 18px;
+		height: 18px;
+		left: 1px;
+		top: 1px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: #4dc235;
+		border-radius: 20px;
+		transition: 0.4s;
+	  }
+
+	  label.active:before{
+		left: 22px;
+	  }
+
+    
+    .act{
+      max-width: 50%; 
+      height: auto; 
+      border-radius: 0.2rem 0.2rem 0 0;
+    }
+    .acttext{
+      width: 50%; 
+      height: auto; 
+      box-sizing: border-box; 
+      border-radius: 0 0 0.2rem 0.2rem;
+    }
+    .actarea{
+      flex: 1; 
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media (max-width: 991.98px) 
+    {
+      .act{
+      max-width: 95%; 
+    
+    }
+      .acttext{
+      width: 95%; 
+
+    }
+
+    .actarea{
+      flex-direction: column;
+    }
+    }
+    
+.words{
+  color: #0d0d0d;
+  transition: ease-in-out .4s;
+}
+   </style>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="./index.html">Biotic and Abiotic<span>ecosystem</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="./index.html" class="nav-link">Home</a></li>
+					<li class="nav-item active"><a href="#" class="nav-link">Module</a></li>
+          <li class="nav-item"><a class="nav-link"><label id="dark-change" ></label></a></li>
+					<li class="nav-item"><a class="nav-link"></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('./images/module2.png');">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+             <p class="breadcrumbs"><span class="mr-2"><a href="./mod.html">Module <i class="fa fa-chevron-right"></i></a></span><span>Module 2 <i class="fa fa-chevron-right"></i></span></p>
+             <h1 class="mb-0 bread">Biotic Component</h1>
+           </div>
+         </div>
+       </div>
+      </section>
+
+
+
+      <section class="ftco-section module2-section" >
+        <div class="container-fluid mx-3">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h1 style="font-weight: bold; font-family: cursive; color: #3f942e;" class="text-center ftco-animate">What is it?  </h1><hr>
+<div class="row mx-5">
+  <h2 class="words ftco-animate" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">BIOTIC COMPONENT</h2>
+<p class="words ftco-animate">Biotic components are the living parts of an ecosystem. The term “biotic” is formed by the combination of two terms, “bio” meaning life and “ic” meaning like. The term means “life like” and is related to all the living entities present in an ecosystem. Based on nutrition, biotic components can be categorised into autotrophs, heterotrophs, and saprotrophs (or decomposers).</p><hr>
+<ul class="mx-3"><li class="words ftco-animate">Producers include all autotrophs such as plants. They are called autotrophs as they can produce food through the process of photosynthesis. Consequently, all othe r organisms higher up on the food chain rely on producers for food.</li><hr>
+<li class="words ftco-animate">Consumers or heterotrophs are organisms that depend on other organisms for food. Consumers are further classified into primary consumers, secondary consumers, and tertiary consumers.</li></ul>
+
+
+
+<ol class="mx-4 ftco-animate"><br>
+  <li><a data-bs-toggle="collapse" href="#collapse-Primary" role="button" aria-expanded="false" aria-controls="collapse-Primary" style="color: #3f942e; ">Primary Consumers  ▼</a></li><hr>
+  <div class="collapse" id="collapse-Primary">
+    <div class="card card-body " style="background-color: #f1f1f1; color: black;">
+      Primary consumers are always herbivores as they rely on producers for food. Some of the primary consumers or herbivores living on the land are chipmunks, mice, horses, birds, deer and some insects. Fish, snails, sea urchins are a few marine primary consumers. 
+    </div><hr>
+    <div class="images"> 
+      <div class="photo"> 
+          <img src="./images/bird.jpg" alt="photo" /> 
+      </div> 
+
+      <div class="photo"> 
+          <img src="./images/horse.jpg" alt="photo" /> 
+      </div> 
+        
+      <div class="photo"> 
+          <img src="./images/urchins.jpg" alt="photo" /> 
+      </div> 
+  </div> 
+  </div>
+
+  <li><a data-bs-toggle="collapse" href="#collapse-Secondary" role="button" aria-expanded="false" aria-controls="collapse-Secondary" style="color: #3f942e; ">Secondary Consumers  ▼</a></li><hr>
+  <div class="collapse" id="collapse-Secondary">
+    <div class="card card-body " style="background-color: #f1f1f1; color: black;">
+      Secondary consumers depend on primary consumers for energy. They can either be carnivores or omnivores. Lion, hawks, snakes, coyotes, wolves, and spiders are a few secondary consumers.
+    </div><hr>
+    <div class="images"> 
+      <div class="photo"> 
+          <img src="./images/snakes.jpg" alt="photo" /> 
+      </div> 
+
+      <div class="photo"> 
+          <img src="./images/ants.jpg" alt="photo" /> 
+      </div> 
+        
+      <div class="photo"> 
+          <img src="./images/lion.jpg" alt="photo" /> 
+      </div> 
+  </div> 
+  </div>
+
+
+  <li><a data-bs-toggle="collapse" href="#collapse-Tertiary" role="button" aria-expanded="false" aria-controls="collapse-Tertiary" style="color: #3f942e; ">Tertiary Consumers  ▼</a></li><hr>
+  <div class="collapse" id="collapse-Tertiary">
+    <div class="card card-body " style="background-color: #f1f1f1; color: black;">
+      Tertiary consumers are organisms that depend on secondary consumers for food.  Tertiary consumers can also be carnivores or omnivores. Some examples of tertiary consumers are sea turtles, sea lions, eagle, and foxes. Tertiary consumers are preyed on by quaternary consumers.
+    </div>
+    <div class="images"> 
+      <div class="photo"> 
+          <img src="./images/turtle.jpg" alt="photo" /> 
+      </div> 
+
+      <div class="photo"> 
+          <img src="./images/fox.jpg" alt="photo" /> 
+      </div> 
+        
+      <div class="photo"> 
+          <img src="./images/eagle.jpg" alt="photo" /> 
+      </div> 
+  </div>
+  </div>
+
+
+  <li><a data-bs-toggle="collapse" href="#collapse-Quaternary" role="button" aria-expanded="false" aria-controls="collapse-Quaternary" style="color: #3f942e; ">Quaternary Consumers  ▼</a></li><hr>
+  <div class="collapse" id="collapse-Quaternary">
+    <div class="card card-body " style="background-color: #f1f1f1; color: black;">
+      Quaternary consumers are present in some food chains. These organisms’ prey on tertiary consumers for energy. Furthermore, they are usually at the top of a food chain as they have no natural predators. Examples include humans, wolves, lions, and orca.
+    </div><hr>
+    <div class="images"> 
+      <div class="photo"> 
+          <img src="./images/humans.jpg" alt="photo" /> 
+      </div> 
+
+      <div class="photo"> 
+          <img src="./images/wolves.jpg" alt="photo" /> 
+      </div> 
+        
+      <div class="photo"> 
+          <img src="./images/lion.jpg" alt="photo" /> 
+      </div> 
+  </div>
+  </div>
+</ol>
+
+
+<!-- ------------------------------------------------------- -->
+<ul class="mx-3"> <li class="words ftco-animate">Decomposers include saprophytes such as fungi and bacteria. They directly thrive on  the dead and decaying organic matter.  Decomposers are essential for the ecosystem as they help in recycling nutrients to be reused by plants.
+</li></ul>
+</div>
+<br><hr class="mx-5">
+
+<p class="mx-5 words ftco-animate">The presence of Biotic Components and their biological by products affect the composition of an ecosystem. Biotic resources include all living organisms from animals and humans, to plants, fungi, and bacteria. Biotic factors comprising the ecosystem include: </p>
+
+<ol class="mx-5 ftco-animate"><br>
+  <li><a data-bs-toggle="collapse" href="#collapse-human" role="button" aria-expanded="false" aria-controls="collapse-human" style="color: #3f942e;">Humans  ▼</a></li><hr>
+  <div class="collapse" id="collapse-human">
+    <div class="card card-body " style="background-color: #f1f1f1; color: black;">
+      Human beings are one of the biotic components of an ecosystem and they depend on plants for food because they are not capable of producing own.
+    </div><hr>
+    <div class="images"> 
+      <div class="photo"> 
+          <img src="./images/humans.jpg" alt="photo" /> 
+      </div>  
+  </div>
+  </div>
+
+  <li><a data-bs-toggle="collapse" href="#collapse-animals" role="button" aria-expanded="false" aria-controls="collapse-animals" style="color: #3f942e;">Animals  ▼</a></li><hr>
+  <div class="collapse" id="collapse-animals">
+    <div class="card card-body " style="background-color: #f1f1f1; color: black;">
+       Animals and human beings are alike in many ways. They are also biotic components that compose the ecosystem and help sustain the needs of other living organisms. Animals get food from the ecosystem such as plants, insects, and mammals alike as well as the other forms of prey.
+    </div><hr> 
+          <img src="./images/animals.jpg" alt="photo" /> 
+  
+  </div>
+
+
+  <li><a data-bs-toggle="collapse" href="#collapse-plants" role="button" aria-expanded="false" aria-controls="collapse-plants" style="color: #3f942e;">Plants  ▼</a></li><hr>
+  <div class="collapse" id="collapse-plants">
+    <div class="card card-body " style="background-color: #f1f1f1; color: black;">
+      Plants such as grasses, trees, flowers, fruits are also part of the biotic components of an ecosystem. They provide food and other important elements like oxygen to humans and animals. They also become source of shelter and other materials in the ecosystem.
+    </div><hr>
+    <div class="images"> 
+      <div class="photo"> 
+          <img src="./images/plant1.jpg" alt="photo" /> 
+      </div> 
+
+      <div class="photo"> 
+          <img src="./images/plant2.jpg" alt="photo" /> 
+      </div> 
+        
+      <div class="photo"> 
+          <img src="./images/plant3.jpg" alt="photo" /> 
+      </div> 
+  </div>
+  </div>
+
+
+  <li><a data-bs-toggle="collapse" href="#collapse-bacteria" role="button" aria-expanded="false" aria-controls="collapse-bacteria" style="color: #3f942e;">Bacteria  ▼</a></li><hr>
+  <div class="collapse" id="collapse-bacteria">
+    <div class="card card-body" style="background-color: #f1f1f1; color: black;">
+      Bacteria and decomposers are also biotic components that help break down the remains of other living organisms by converting them into nutrients found in soil.
+    </div><hr>
+    <div class="images"> 
+      <div class="photo"> 
+          <img src="./images/bacteria1.jpg" alt="photo" /> 
+      </div> 
+
+      <div class="photo"> 
+          <img src="./images/bacteria2.jpg" alt="photo" /> 
+      </div> 
+        
+      <div class="photo"> 
+          <img src="./images/bacteria3.jpg" alt="photo" /> 
+      </div> 
+  </div>
+  </div>
+</ol>
+
+<!-- ACCORDION ---------------------- -->
+<div class="row ftco-animate">
+  <a style="background-color: #3f942e;" href="#ecosystem-details" aria-expanded="true" data-toggle="collapse" class="mx-auto scrolldrag text-center" aria-controls="ecosystem-details">
+    <h1 class="text-center w-col">ACTIVITY 1</h1>
+  </a>
+</div>
+
+<!-- Second Row (Content Section) -->
+<!-- Content Section -->
+<div class="row mt-4">
+  <div class="column mx-auto" style="width: 100%; border-radius: 0.2rem;">
+    <div class="collapse" id="ecosystem-details">
+      <div class="content-container p-4"> <!-- Add padding for better spacing -->
+        <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: left;" class="words">Find Me</h2>
+        <p style="text-align: left;" class="words">Directions: Find and list down the biotic or living components of the ecosystem as many as you can in the illustration below.</p>
+        <hr>
+
+        <div class="actarea"> <!-- Flex item for image and textarea -->
+          <img src="./images/abiotic.jpg" class="act" > <!-- Ensure image fills its container -->
+          <textarea id="userInput" rows="5" class="acttext" placeholder="Type your explanation here..."></textarea> <!-- Use box-sizing to include padding in width -->
+        </div>
+      
+        <button onclick="calculateExplanationScore()" style="background-color: #3f942e;" class="btn scrolldrag py-3 px-4 d-md-1 mr-5">Submit your Answer</button>
+        
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br><br><br>
+<div class="row mx-5">
+<form action="./mod3.html">
+  <p class="words ftco-animate">Now that you have learned what is biotic components and its role in the ecosystem, let us proceed to abiotic components and learn their significance in the ecosystem.</p>
+  <button onclick="markButton1Clicked() " style="background-color: #3f942e;" class=" ftco-animate btn scrolldrag py-3 px-4 d-md-1  mr-5">ABIOTIC COMPONENT</button>
+</form>
+</div>
+          </div>
+        </div>
+        </div>
+
+        
+</section>
+
+
+<footer class="main-footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                  <div class="logo-widget footer-widget">
+                      <figure class="logo-box"><a href="#"><h3 style="color: #fff;"><b>Disclaimer</b></h3></a></figure>
+                      <div class="text">
+                          <p>This learning material includes ideas, graphics, and pictures sourced from various individuals and organizations for educational purposes. Efforts have been made to ensure that proper credit is given to the original creators. The authors do not represent nor claim ownership over them.</p>
+                      </div>
+                      <ul class="footer-social">
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                          <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+            
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                  <div class="contact-widget footer-widget">
+                      <div class="footer-title">Contacts</div>
+                      <div class="text">
+                          
+                          <p>+63 00000000</p>
+                          <p>pogi.freelance@gmail.com</p>
+          
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                <div class="contact-widget footer-widget">
+                    <div class="footer-title">Image Sources</div>
+                    <div class="text">
+                        
+                        <a style="color: gray;" href="https://www.plantscience4u.com/2016/07/ecosystem-definition-different-types.html#google_vignette">Activity 1 Image</a>
+                       
+        
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- main-footer end -->
+<div class="footer-bottom">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 column">
+              <div class="copyright"><a href="#">0xkenn Jet</a> &copy; 2019 All Right Reserved</div>
+          </div>
+         
+      </div>
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a056a765ce.js" crossorigin="anonymous"></script> <!--fonts-->
+
+
+
+
+   
+
+      
+  
+       
+
+
+    
+    <script src="./script.js"></script>
+    <script src="./module/level.js"></script>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+			<script src="./js/jquery.min.js"></script>
+			<script src="./js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="./js/popper.min.js"></script>
+			<script src="./js/bootstrap.min.js"></script>
+			<script src="./js/jquery.easing.1.3.js"></script>
+			<script src="./js/jquery.waypoints.min.js"></script>
+			<script src="./js/jquery.stellar.min.js"></script>
+			<script src="./js/owl.carousel.min.js"></script>
+			<script src="./js/jquery.magnific-popup.min.js"></script>
+			<script src="./js/jquery.animateNumber.min.js"></script>
+			<script src="./js/bootstrap-datepicker.js"></script>
+			<script src="./js/scrollax.min.js"></script>
+			<script src="./quiz/drag-and-drop/drag-and-drop.js"></script>
+
+      <script>
+        // Function to toggle dark mode styles
+        function toggleDarkMode() {
+          
+          // var navbar = document.querySelector('.ftco-navbar-light');
+          // var navbarcolor = document.querySelector('.ftco-navbar-light ');
+          var section = document.querySelector('.module2-section');
+          var word = document.querySelectorAll('.words');
+          
+          
+          
+        
+  
+  
+          // Toggle dark mode based on the active class of the toggle button
+          if (darkModeToggle.classList.contains('active')) {
+            // Dark mode is active: apply styles for dark mode
+            // navbar.classList.add('filter-style'); // Apply filter-style class to navbar
+            // navbarcolor.style.backgroundColor = 'white';
+            section.style.backgroundColor = '#323b2a';
+
+            word.forEach(function(sen) {
+              sen.style.color = '#fff';
+            });
+          
+        
+        
+       
+         
+
+          } else {
+            // Dark mode is inactive: revert styles to default
+            // navbar.classList.remove('filter-style'); // Remove filter-style class from navbar
+            // navbarcolor.style.backgroundColor = 'black';
+            section.style.backgroundColor = '';
+
+           word.forEach(function(sen) {
+              sen.style.color = '';
+            });
+          
+        
+
+          
+          }
+        }
+  
+        var darkModeToggle = document.getElementById('dark-change');
+         // Event listener for dark mode toggl
+         darkModeToggle.addEventListener('click', function() {
+
+            darkModeToggle.classList.toggle('active');
+            var isDark = darkModeToggle.classList.contains('active');
+            localStorage.setItem('isDark', isDark);
+            toggleDarkMode();
+
+        });
+
+        // On page load, check local storage for dark mode preference
+        document.addEventListener('DOMContentLoaded', function() {
+            var isDark = localStorage.getItem('isDark') === 'true';
+            if (isDark) {
+                darkModeToggle.classList.add('active');
+                
+            }
+            toggleDarkMode(); 
+        });
+  
+  
+        </script>
+
+
+
+
+<script> function calculateExplanationScore() {
+  const keyTerms = {
+    "trees": 1,
+    "tree": 1,
+    "flowers": 1,
+    "flower": 1,
+    "trunk": 1,
+    "waterlilies": 1,
+    "waterlily": 1,
+    "fishes": 1,
+    "fish": 1,
+    "birds": 1,
+    "bird": 1,
+    "dragonfly": 1,
+    "frogs": 1,
+    "frog": 1,
+    "bugs": 1,
+    "turtle": 1,
+    "turtles": 1,
+    "goat": 1,
+    "raccoon": 1,
+    "bug": 1,
+    "animals": 1,
+    "plants": 1,
+    "insects": 1,
+    "animal": 1,
+    "plant": 1,
+    "insect": 1
+  };
+
+  const userInput = document.getElementById('userInput').value.toLowerCase();
+
+  // Use regex to split text into words (excluding non-alphanumeric characters)
+  const words = userInput.match(/\b\w+\b/g);
+
+  let termCount = {};
+  let totalScore = 0;
+
+  // Count occurrences of key terms in user input
+  words.forEach(word => {
+    const sanitizedWord = word.replace(/[^a-zA-Z]/g, ''); // Remove non-alphanumeric characters
+    if (keyTerms.hasOwnProperty(sanitizedWord)) {
+      termCount[sanitizedWord] = (termCount[sanitizedWord] || 0) + 1;
+    }
+  });
+
+  // Calculate total score based on term counts
+  for (const term in termCount) {
+    totalScore += termCount[term] * keyTerms[term];
+  }
+
+  // Determine score category and display corresponding alert
+  let message;
+  if (totalScore <= 3) {
+    message = `BETTER LUCK NEXT TIME!
+
+Possible Answers:
+\u25CF Trees
+\u25CF Flowers
+\u25CF Grass
+\u25CF Wood
+\u25CF Waterlilies
+\u25CF Fishes
+\u25CF Birds
+\u25CF Dragonfly
+\u25CF Frogs
+\u25CF Bugs
+\u25CF Turtles
+\u25CF Goat
+\u25CF Raccoon`;
+  } else if (totalScore > 3 && totalScore < 10) {
+    message = `GOOD JOB! YOU FOUND SOME OF THEM
+
+Possible Answers:
+\u25CF Trees
+\u25CF Flowers
+\u25CF Grass
+\u25CF Wood
+\u25CF Waterlilies
+\u25CF Fishes
+\u25CF Birds
+\u25CF Dragonfly
+\u25CF Frogs
+\u25CF Bugs
+\u25CF Turtles
+\u25CF Goat
+\u25CF Raccoon`;
+  } else if (totalScore >= 10) {
+    message = `GREAT JOB! YOU FOUND MOST OF THEM
+
+Possible Answers:
+\u25CF Trees
+\u25CF Flowers
+\u25CF Grass
+\u25CF Wood
+\u25CF Waterlilies
+\u25CF Fishes
+\u25CF Birds
+\u25CF Dragonfly
+\u25CF Frogs
+\u25CF Bugs
+\u25CF Turtles
+\u25CF Goat
+\u25CF Raccoon`;
+  }
+
+  // Display alert message based on score
+  alert(message);
+
+  // Store user input and total score in localStorage if not already stored
+  const storedUserInput = localStorage.getItem('userExplanationB');
+  if (!storedUserInput) {
+    localStorage.setItem('userExplanationB', userInput);
+    localStorage.setItem('totalScoreB', totalScore);
+  } else {
+    console.log('userExplanationB already exists in localStorage:', storedUserInput);
+  }
+}
+</script>
+
+
+<script>
+  // Function to mark button1 as clicked in localStorage
+  function markButton1Clicked() {
+      let DataisThere = localStorage.getItem('modcheck2');
+      if(!DataisThere){
+          localStorage.setItem('modcheck2', true);
+      }
+  }
+</script>
+
+			<script src="./js/main.js"></script>
+</body>
+</html>

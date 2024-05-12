@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Biotic abiotic</title>
+	<link rel="icon" type="image/png" href="/images/coca-leaves.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/animate.css">
+	<link rel="stylesheet" href="./module/style.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/magnific-popup.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<style>
+	   .overlay-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250.625em;
+        height: 23.8em;
+        background: url(https://terriotech.com/cloud-overlay.png) 0 100%
+          repeat-x;
+        -webkit-animation: cloudLoop 80s linear infinite;
+        animation: cloudLoop 80s linear infinite;
+        z-index: 2;
+        pointer-events: none;
+        height: 43.75em;
+      }
+      @-webkit-keyframes cloudLoop {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+          -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+        }
+      }
+
+      @keyframes cloudLoop {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+          -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+        }
+
+      }
+
+	  label{
+		position: absolute;
+		width: 45px;
+		height: 25px;
+		
+		border: 2px solid;
+		border-radius: 20px;
+		border-color: #4dc235
+;
+	  }
+
+	  label::before{
+		position: absolute;
+		content: "";
+		width: 18px;
+		height: 18px;
+		left: 1px;
+		top: 1px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: #4dc235
+;
+		border-radius: 20px;
+		transition: 0.4s;
+	  }
+
+	  label.active:before{
+		left: 22px;
+	  }
+
+	.button 
+	{
+		display: inline-block;
+		padding: 10px 20px; /* Adjust padding as needed */
+		border-radius: 0.3rem; /* Rounded border radius */
+		background-color: #3f942e;
+		color: #fff; /* Text color */
+		font-size: 16px; /* Adjust font size */
+		text-decoration: none; /* Remove underline */
+		border: none; /* Remove border */
+		cursor: pointer; /* Show pointer cursor on hover */
+		transition: background-color 0.3s ease; /* Smooth transition for background color */ 
+	}
+
+
+	.button:hover {
+		transition: ease-in-out .1s;
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);/* Darken the background color on hover */
+		color: black; 
+	}
+
+	.button:active {
+		background-color: 3f942e; /* Change to a darker color when button is pressed */
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow to give a pressed effect */
+	}
+
+	.dark{
+		color: rgb(26, 36, 26);
+		transition: ease-in-out .4s;
+	}
+
+	.team{
+		background-color: #c5e1c4;
+		transition: ease-in-out .4s;
+	}
+
+
+	</style>
+	   <link rel="manifest" href="./manifest.json">
+	   <script>
+		if('serviceWorker' in navigator){
+			window.addEventListener*("load", () => {
+				navigator.serviceWorker.register('./sw.js');
+			});
+		}
+	   </script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"  id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="./index.html">
+				Biotic and Abiotic<span>ecosystem</span>
+			</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="oi oi-menu"></span>Menu
+				</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a href="./index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="./mod.html" class="nav-link">Module</a></li>
+					<li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+					<li class="nav-item"><a class="nav-link"><label id="dark-change" ></label></a></li>
+					<li class="nav-item"><a class="nav-link"></a></li>
+					
+				</ul>
+			</div>
+		</div>
+		
+	</nav>
+	<!-- END nav -->
+	
+	<div class="hero-wrap js-fullheight" style="background-image: url('./images/Screenshot\ \(1139\).png');">
+		<div class="overlay">
+		</div>
+		<div class="overlay-2">
+		</div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+				<div class="col-md-7 ftco-animate">
+					<span class="subheading">Let's Learn</span>
+					<h1 class="mb-4">BIOTIC AND ABIOTIC COMPONENTS OF AN ECOSYSTEM</h1>
+				</div>
+				<a href="./video.mp4" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<span class="fa fa-play"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<section class="ftco-section services-section" >
+		<div class="container" >
+			<div class="row d-flex" >
+				<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center"  >
+					<div class="w-100">
+						<span class="subheading">Welcome to The Learning Section</span>
+						<h2 class="mb-4 dark">Most Essential Learning Competency</h2>
+						<p class="dark"> Demonstrate an understanding of organisms interacting with each other and with their environment; and the biotic and abiotic components of an ecosystem. After going through this lesson, you are expected to:</p>
+						<ol class="dark" style="margin-left: 20px;">
+							<li>Define abiotic and biotic components of ecosystem; and</li>
+							<li>Identify abiotic and biotic components of ecosystem</li>
+						</ol>
+						<p><a href="./drag-and-drop.html" class="button py-3 px-4">Let's get Started</a></p>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</section>
+
+
+		<!-- TEAMMM -->
+		<!-- ======= Team Section ======= -->
+	<section id="team" class="team">
+		<div class="section-title">
+			<h1 class="text-center mr-5 ftco-animate"style="color: #3f942e;" ><b>TEAM</b></h1>
+		</div>
+		<div class="container" data-aos="fade-up">  
+		  <div class="row justify-content-center">
+				<div class="col-lg-3 col-md-6 d-flex ftco-animate align-items-stretch" >
+					<div class="member" data-aos="fade-up" data-aos-delay="100" >
+						<div class="member-img">
+							<img src="./images/author2.jpg" class="img-fluid" alt="">
+							<div class="social">
+								<a href="mailto:jeannbacay21@gmail.com"><i class="fa fa-envelope"></i></a>
+								<a href="https://www.facebook.com/jhoy.matugas.7"><i class="fa fa-facebook"></i></a>
+								<a href="tel:09659846798"><i class="fa fa-phone"></i></a>
+							</div>
+						</div>
+						<div class="member-info">
+							<h4>Jhoy E. Matugas</h4>
+							<span><b><i>Author</i></b></span><hr>
+							<span><b>School/Department:</b> BiPSU-School of Teacher Education</span><hr>
+							<span><b>Program:</b> Bachelor of Secondary Education major in Science</span><hr>
+							<span><b>Year level:</b> 3rd Year</span><hr>
+							<span><b>Address:</b> Brgy. Lucsoon, Naval, Biliran</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 d-flex ftco-animate align-items-stretch">
+					<div class="member" data-aos="fade-up" data-aos-delay="300">
+						<div class="member-img">
+							<img src="./images/author1.jpg" class="img-fluid" alt="">
+							<div class="social">
+								<a href="mailto:matugasjhoy547@gmail.com"><i class="fa fa-envelope"></i></a>
+								<a href="https://www.facebook.com/jeannbacay21"><i class="fa fa-facebook"></i></a>
+								<a href="tel:09704503717"><i class="fa fa-phone"></i></a>
+							</div>
+						</div>
+						<div class="member-info">
+							<h4>Jeann Bacay</h4>
+							<span><b><i>Author</i></b></span><hr>
+							<span><b>School/Department:</b> BiPSU-School of Teacher Education</span><hr>
+							<span><b>Program:</b> Bachelor of Secondary Education major in Science</span><hr>
+							<span><b>Year level:</b> 3rd Year</span><hr>
+							<span><b>Address:</b> Villaconsuelo, Naval, Biliran</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 d-flex ftco-animate align-items-stretch">
+					<div class="member" data-aos="fade-up" data-aos-delay="300">
+						<div class="member-img">
+							<img src="./images/consultant.jpg.png" class="img-fluid" alt="" >
+							<div class="social">
+								<a href="mailto:strikinglight23@gmail.com"><i class="fa fa-envelope"></i></a>
+								<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+								<a href="tel:09171620227"><i class="fa fa-phone"></i></a>
+							</div>
+						</div>
+						<div class="member-info">
+							<h4>DR. ERNIL D. SUMAYAO</h4>
+							<span><b><i>Consultant</i></b></span><hr>
+							<span><b>School/Department:</b> BiPSU-School of Teacher Education</span><hr>
+							<span><b>Address:</b> Dapdap Agpangi, Naval, Biliran</span>
+						</div>
+					</div>
+				</div>
+		  </div>
+		</div>
+		<ol class="mx-4"><br>
+			<a data-bs-toggle="collapse" href="#collapse-Primary" role="button" aria-expanded="false" aria-controls="collapse-Primary" style="color: #3f942e; ">REFERENCES  ▼</a><hr>
+			<div class="collapse" id="collapse-Primary">
+			  <div class="card card-body" style="background-color: #f1f1f1;">
+					<p>Asuncion, Alvie J.; Catalan, Helen D. Ph.D.; Catris, Leticia H. Ph.D.; Ferido, Marlene B. Ph.D. 2017. Science Learner's Material. Pasig City: FEP Printing Corporation.</p> 
+				
+					<p>Bates, Mary. 2019. nationalgeographic. February 24. Accessed March 21, 2024. <a style="color: #3f942e" href="https://nationalgeographic.com.au/animals/why-do-these-monkeys-nurseeach-others">https://nationalgeographic.com.au/animals/why-do-these-monkeys-nurseeach-others.</a></p>
+					<p>Castillo, Katrina. n.d. wallpaperflare. Accessed March 19, 2024. <a style="color: #3f942e" href="https://www.wallpaperflare.com/orange-crab-photo-galapagos-ecuadornature-wildlife-one-animal">https://www.wallpaperflare.com/orange-crab-photo-galapagos-ecuadornature-wildlife-one-animal.</a></p>
+					<p>Flores, Alvin C., Evelyn L. Josue, and Merle C. Tan. 2004. Integrated Science: Science and Technology Textbook for First Year. Caloocan City: Grand C Graphics, Inc.</p>
+					<p>Teacher, India's Best;. n.d. byjus. Accessed March 21, 2024. <a style="color: #3f942e" href="https://byjus.com/biology/ecosystem/#abiotic-components">https://byjus.com/biology/ecosystem/#abiotic-components</a></p>
+					<p>Peekaboo Kidz. (2017, November 24) ECOSYSTEM- The Dr. Binocs Show [Video]. YouTube. <a style="color: #3f942e" href="https://youtu.be/sKJoXdrOT70?feature=shared">https://youtu.be/sKJoXdrOT70?feature=shared</a></p>
+			  </div><hr>
+			</div>
+		</ol>
+	</section>
+		<!-- End Team Section -->
+	
+
+			
+	<footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="logo-widget footer-widget">
+                            <figure class="logo-box"><a href="#"><h3 style="color: #fff;"><b>Disclaimer</b></h3></a></figure>
+                            <div class="text">
+                                <p>This learning material includes ideas, graphics, and pictures sourced from various individuals and organizations for educational purposes. Efforts have been made to ensure that proper credit is given to the original creators. The authors do not represent nor claim ownership over them.</p>
+                            </div>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                        <div class="contact-widget footer-widget">
+                            <div class="footer-title">Contacts</div>
+                            <div class="text">
+                                
+                                <p>+63 00000000</p>
+                                <p>pogi.freelance@gmail.com</p>
+								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 column">
+                    <div class="copyright"><a href="#">0xkenn Jet</a> &copy; 2019 All Right Reserved</div>
+                </div>
+            </div>
+        </div>
+    </div>
+			<!-- loader -->
+			<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+			<script src="https://kit.fontawesome.com/a056a765ce.js" crossorigin="anonymous"></script> <!--fonts-->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/jquery.easing.1.3.js"></script>
+			<script src="js/jquery.waypoints.min.js"></script>
+			<script src="js/jquery.stellar.min.js"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>
+			<script src="js/jquery.animateNumber.min.js"></script>
+			<script src="js/scrollax.min.js"></script>
+			
+			<script src="js/main.js"></script>
+
+			<script>
+			// Function to toggle dark mode styles
+			function toggleDarkMode() {
+				var darkModeToggle = document.getElementById('dark-change');
+				var sectiontext = document.querySelectorAll('.dark ');
+				var section = document.querySelector('.ftco-section');
+				var team = document.querySelector('.team');
+		
+
+
+
+				// Toggle dark mode based on the active class of the toggle button
+				if (darkModeToggle.classList.contains('active')) {
+
+				
+					section.style.backgroundColor = '#313f2c';
+					team.style.backgroundColor = '#313f2c';
+					
+					sectiontext.forEach(function(text) {
+						text.style.color = 'white'
+					});
+
+					
+				
+				} else {
+					
+					team.style.backgroundColor = '';
+					section.style.backgroundColor = '';
+				
+					sectiontext.forEach(function(text) {
+						text.style.color = ''
+					});
+
+					
+				
+				}
+			}
+
+			var darkModeToggle = document.getElementById('dark-change');
+			// Event listener for dark mode toggl
+			darkModeToggle.addEventListener('click', function() {
+
+				darkModeToggle.classList.toggle('active');
+				var isDark = darkModeToggle.classList.contains('active');
+				localStorage.setItem('isDark', isDark);
+				toggleDarkMode();
+
+			});
+
+			// On page load, check local storage for dark mode preference
+			document.addEventListener('DOMContentLoaded', function() {
+				var isDark = localStorage.getItem('isDark') === 'true';
+				if (isDark) {
+					darkModeToggle.classList.add('active');
+				}
+				toggleDarkMode(); 
+			});
+			</script>
+			
+		</body>
+		</html>

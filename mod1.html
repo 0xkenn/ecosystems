@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="icon" type="image/png" href="/images/coca-leaves.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/animate.css">
+  
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  
+  <link rel="stylesheet" href="./css/flaticon.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+  <link rel="stylesheet" href="./module/style.css">
+  <link rel="stylesheet" href="./module/modal.css">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Module 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+    
+     
+     
+    .module1pt2-section{
+      background-color: #c5e1c4; /* here */
+      margin: auto;
+    }
+    .module1pt3-section{
+      background-color: #c5e1c4;
+      margin: auto;
+    }
+
+
+           .lobster-regular {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          label{
+		position: absolute;
+		width: 45px;
+		height: 25px;
+		
+		border: 2px solid;
+		border-radius: 20px;
+		border-color: #4dc235;
+	  }
+
+	  label::before{
+		position: absolute;
+		content: "";
+		width: 18px;
+		height: 18px;
+		left: 1px;
+		top: 1px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: #4dc235;
+		border-radius: 20px;
+		transition: 0.4s;
+	  }
+
+	  label.active:before{
+		left: 22px;
+	  }
+    
+    .w-col{
+      color: black ;
+    }
+
+    .scrolldrag
+    {
+      border-radius: 0.2rem;
+      box-shadow: 0 8px 16px 0 rgba(102, 100, 100, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .scrolldrag {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+
+  color: #fff; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+  /* Optional: Add box shadow for a subtle effect */
+  
+}
+
+/* Hover effect */
+.scrolldrag:hover {
+	transition: ease-in-out .1s;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);/* Darken the background color on hover */
+  color: black; 
+}
+
+.scrolldrag:active {
+  background-color:  rgba(0, 0, 0, 0.5); /* Change to a darker color when button is pressed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow to give a pressed effect */
+
+}
+
+.column{
+  width: 40%; background-color: #bebdbd; border-radius: 1em;display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+}
+
+.cright{
+  margin-left: 100px
+}
+@media (max-width: 991.98px)  {
+  .column{
+   width: 90%; 
+   margin-bottom: 10px;
+  }
+  .cright{
+    margin-left: 10px
+  }
+}
+
+
+
+.words{
+  color: #0d0d0d;
+}
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="./index.html">Biotic and Abiotic<span>ecosystem</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="./index.html" class="nav-link">Home</a></li>
+					<li class="nav-item active"><a href="#" class="nav-link">Module</a></li>
+          <li class="nav-item"><a class="nav-link"><label id="dark-change" ></label></a></li>
+					<li class="nav-item"><a class="nav-link"></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('./images/mod1.png');">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+             <p class="breadcrumbs"><span class="mr-2"><a href="./mod.html">Module <i class="fa fa-chevron-right"></i></a></span><span>Module 1 <i class="fa fa-chevron-right"></i></span></p>
+             <h1 class="mb-0 bread">Ecosystem</h1>
+           </div>
+         </div>
+       </div>
+      </section>
+      
+  
+       
+
+
+
+       <section class="ftco-section module1pt2-section" >
+        <div class="container-fluid mx-3">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h1 style="font-weight: bold; font-family: cursive; color: #3f942e;" class="text-center ftco-animate">What is it?  </h1><hr>
+            <div class="row mx-5">
+            <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">ECOSYSTEM</h1><hr>
+    
+    <p class="words ftco-animate">An ecosystem is a structural and functional unit of ecology where the living organisms interact with each other and the surrounding environment. In other words, an ecosystem is a chain of interactions between organisms and their environment. The term “Ecosystem” was first coined by A.G.Tansley, an English botanist, in 1935.</p>
+    <br>
+    <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Structure of the Ecosystem</h1><hr>
+    <p class="words ftco-animate">The structure of an ecosystem is characterised by the organisation of both biotic and abiotic components. This includes the distribution of energy in our environment. It also includes the climatic conditions prevailing in that environment. </p>
+
+
+<br>
+<p class="words ftco-animate">The structure of an ecosystem can be split into two main components, namely: </p>
+<p class="words ftco-animate">•	Biotic Components</p>
+<p class="words ftco-animate">•	Abiotic Components</p>
+<p class="words ftco-animate">The biotic and abiotic components are interrelated in an ecosystem. It is an open system where the energy and components can flow throughout the boundaries</p>
+</div>
+<br>
+<div class="row mt-4 ftco-animate">
+  <a style="width: 80%; background-color: #3f942e;" href="#ecosystem-details" aria-expanded="true"  data-toggle="collapse" class="mx-auto scrolldrag text-center" aria-controls="ecosystem-details" >
+      <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col"  >STRUCTURE OF AN ECOSYSTEM</h1> 
+  </a>
+</div>
+<div class="row mt-4">
+      <div class="column cright  text-lg-left collapse"  id="ecosystem-details" aria-expanded="true">
+        <div class="mx-5 mt-3"><h2 class="words">Biotic Components</h2> <hr>
+          
+          <p class="words">Producers</p><hr>
+          <p class="words">Consumers: Herbivores, Carnivores, Omnivores</p><hr>
+          <p class="words">Decomposers</p><hr></div>
+          
+      </div>
+  <div class="column  text-lg-left  collapse" style="margin-left: 10px" aria-expanded="true" id="ecosystem-details">
+      <div class="ml-5 mt-3"><h2 class="words">Abiotic Components</h2> <hr>
+        <p class="words">Air</p> <hr>
+        <p class="words">Soil</p> <hr>
+        <p class="words">Sunlight</p> <hr>
+        <p class="words">Water</p></div>
+  </div>
+</div>
+
+<br>
+
+
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+      <section class="ftco-section module1pt3-section" >
+        <div class="container">
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="row mx-5">
+            <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Types Of Ecosystem</h1><hr>
+<p class="words ftco-animate">An ecosystem can be as small as an oasis in a desert, or as big as an ocean, spanning thousands of miles. <br> There are two types of ecosystems:</p>
+
+<ul class="ml-3 ">
+  <li ><a href="#Tmodal" data-toggle="modal" data-target="#Tmodal" class="ftco-animate" style="color: #3f942e;">Terrestrial Ecosystem</a></li>
+
+  <!--------------------------------------------------- MODAL 1------------------------------------- -->
+<div class="modal fade" id="Tmodal" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content mx-auto">
+      <div class="modal-header">
+        <!-- MODAL 1 HEADER -->
+        <h5 class="modal-title " >
+          Terrestrial Ecosystem
+      </h5>
+      <button type="button" class="close colose" data-dismiss="modal" aria-label="Close" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+    </div>
+
+    
+      <div class="modal-body ">
+        <!-------------------------------- MODAL 1 BODY -------------------------- -->
+        <h6 class="mx-3 mt-4" >
+          Terrestrial ecosystems are exclusively land-based ecosystems. There are different types of terrestrial ecosystems distributed around various geological zones. They are as follows:
+        </h6> <hr>
+
+
+        <!--------------------------------- Carousel----------------------- -->
+       <div class="carousel slide" id="carouselindicators" data-ride="carousel" data-slide="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselindicators" data-slide-to="'0" class="active"></li>
+          <li data-target="#carouselindicators" data-slide-to="'1"></li>
+          <li data-target="#carouselindicators" data-slide-to="'2"></li>
+          <li data-target="#carouselindicators" data-slide-to="'3"></li>
+        </ol>
+        <!--------------------------- CAROUSEL CONTENT---------------- -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 class="ml-4 modal-part">1. Forest Ecosystem</h3>
+            <div class="row mx-4">
+              
+              <img class="img-size" src="./real-images/forestEcosystem.png" alt="First Slide">
+              <div class="col-sm my-3 mt-3"><p>Forest ecosystem consists of several plants, particularly trees, animals and microorganisms that live in coordination with the abiotic factors of the environment. Forests help in maintaining the temperature of the earth and are the major carbon sink.</p></div>
+            </div>
+          </div>
+
+          <!-- 2nd content -->
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">2. Grassland Ecosystem</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/grass_land.jpg" alt="Second Slide">
+              <div class="col-sm my-3 mt-3"><p>In a grassland ecosystem, the vegetation is dominated by grasses and herbs. Temperate grasslands and tropical or savanna grasslands are examples of grassland ecosystems</p></div>
+            </div>
+          </div>
+
+          <!-- 3rd Content -->
+
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">3. Tundra Ecosystem</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/tundra.jpg" alt="Third Slide">
+              <div class="col-sm my-3 mt-3"><p>Tundra ecosystems are devoid of trees and are found in cold climates or where rainfall is scarce. These are covered with snow for most of the year. Tundra type of ecosystem is found in the Arctic or mountain tops.</p></div>
+            </div>
+          </div>
+
+          <!-- 4th Content -->
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">4. Desert Ecosystem</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/dessert.jpg" alt="Fourth Slide">
+              <div class="col-sm my-3 mt-3"><p>Deserts are found throughout the world. These are regions with little rainfall and scarce vegetation. The days are hot, and the nights are cold.</p></div>
+            </div>
+          </div>
+          
+        </div> 
+        <!-- Carousel control -->
+        <a
+        class='carousel-control-prev'
+        href='#carouselindicators'
+        role='button'
+        data-slide='prev'
+        >
+       <span class="carousel-control-prev-icon"
+             aria-hidden='true'
+             ></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a
+     class='carousel-control-next'
+     href='#carouselindicators'
+     role='button'
+     data-slide='next'
+     >
+    <span
+          class='carousel-control-next-icon'
+          aria-hidden='true'
+          ></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+       </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default modal-part" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--------------------- MODAL 2 --------------------- -->
+  <li><a href="#Amodal" data-toggle="modal" data-target="#Amodal" class="ftco-animate" style="color: #3f942e;">Aquatic Ecosystem</a></li>
+  <div class="modal fade" id="Amodal" tabindex="-1" role="dialog" aria-labelledby="modal2" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content mx-auto">
+        <div class="modal-header">
+          <!-- MODAL 1 HEADER -->
+          <h5 class="modal-title " >
+            Aquatic Ecosystem
+        </h5>
+        <button type="button" class="close colose" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+  
+      </div> <!--End HEader-->
+
+      <div class="modal-body">
+        <h6 class="ml-3 mt-3">Aquatic ecosystems are ecosystems present in a body of water. These can be further divided into two types, namely:</h6><hr>
+      
+
+      <!-- CAROUSEL -->
+
+      <div class="carousel slide" id="carouselindicator" data-ride="carousel" data-slide="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselindicator" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselindicator" data-slide-to="1"></li>
+      
+
+        </ol>
+
+
+        <!-- 1st Content -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 class="ml-4 modal-part">1. Freshwater Ecosystem</h3>
+            <div class="row mx-4">
+              
+              <img class="img-size" src="./real-images/fw.jpg" alt="First Slide">
+              <div class="col-sm my-3 mt-3"><p>The freshwater ecosystem is an aquatic ecosystem that includes lakes, ponds, rivers, streams and wetlands. These have no salt content in contrast with the marine ecosystem.</p></div>
+            </div>
+          </div>
+
+          <!-- 2nd content -->
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">2. Marine Ecosystem</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/meco.jpg" alt="Second Slide">
+              <div class="col-sm my-3 mt-3"><p>The marine ecosystem includes seas and oceans. These have a more substantial salt content and greater biodiversity in comparison to the freshwater ecosystem.</p></div>
+            </div>
+          </div>
+          <a
+          class='carousel-control-prev'
+          href='#carouselindicator'
+          role='button'
+          data-slide='prev'
+          >
+         <span class="carousel-control-prev-icon"
+               aria-hidden='true'
+               ></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a
+       class='carousel-control-next'
+       href='#carouselindicator'
+       role='button'
+       data-slide='next'
+       >
+      <span
+            class='carousel-control-next-icon'
+            aria-hidden='true'
+            ></span>
+      <span class="sr-only">Next</span>
+    </a>
+  
+         </div>
+  
+  
+        </div>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default modal-part" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+      </div>
+      </div>
+</ul>
+
+
+
+
+<form action="./mod2.html">
+  <p class="words ftco-animate">Now that you understand what an ecosystem is, you are now ready to dig deeper about the factors or components that constitute it – the biotic and abiotic component</p>
+  <button onclick="markButton1Clicked()" style="background-color: #3f942e;"class="ftco-animate btn scrolldrag py-3 px-4 d-md-1  mr-5">BIOTIC COMPONENT</button>
+</form>
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
+
+
+      <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="logo-widget footer-widget">
+                            <figure class="logo-box"><a href="#"><h3 style="color: #fff;"><b>Disclaimer</b></h3></a></figure>
+                            <div class="text">
+                                <p>This learning material includes ideas, graphics, and pictures sourced from various individuals and organizations for educational purposes. Efforts have been made to ensure that proper credit is given to the original creators. The authors do not represent nor claim ownership over them.</p>
+                            </div>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                        <div class="contact-widget footer-widget">
+                            <div class="footer-title">Contacts</div>
+                            <div class="text">
+                                
+                                <p>+63 00000000</p>
+                                <p>pogi.freelance@gmail.com</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 ">
+                    <div class="copyright"><a href="#">0xkenn Jet</a> &copy; 2019 All Right Reserved</div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://kit.fontawesome.com/a056a765ce.js" crossorigin="anonymous"></script> <!--fonts-->
+  
+  
+
+    
+    
+    <script src="./script.js"></script>
+    <script src="./module/level.js"></script>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+			<script src="./js/jquery.min.js"></script>
+			<script src="./js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="./js/popper.min.js"></script>
+			<script src="./js/bootstrap.min.js"></script>
+			<script src="./js/jquery.easing.1.3.js"></script>
+			<script src="./js/jquery.waypoints.min.js"></script>
+			<script src="./js/jquery.stellar.min.js"></script>
+			<script src="./js/owl.carousel.min.js"></script>
+			<script src="./js/jquery.magnific-popup.min.js"></script>
+			<script src="./js/jquery.animateNumber.min.js"></script>
+			<script src="./js/scrollax.min.js"></script>
+			<script src="./drag-and-drop.js"></script>
+
+      <script>
+        // Function to toggle dark mode styles
+        function toggleDarkMode() {
+        
+        
+          var section = document.querySelector('.module1pt2-section');
+          var section2 = document.querySelector('.module1pt3-section');
+          var fontcol = document.querySelectorAll('.w-col');
+          var modalTitle = document.querySelectorAll('.modal-title');
+          var modalPart = document.querySelectorAll('.modal-part');
+          var modalContent = document.querySelectorAll('.modal-content');
+          var modalBody = document.querySelectorAll('.modal-body');
+          var close = document.querySelectorAll('.colose');
+          var word = document.querySelectorAll('.words');
+          
+        
+  
+  
+          // Toggle dark mode based on the active class of the toggle button
+          if (darkModeToggle.classList.contains('active')) {
+            // Dark mode is active: apply styles for dark mode
+            
+            
+        
+            section.style.backgroundColor = '#323b2a';
+            section2.style.backgroundColor = '#323b2a';
+            
+            word.forEach(function(sen) {
+              sen.style.color = '#fff';
+            });
+
+            close.forEach(function(exit) {
+              exit.style.backgroundColor = '#323b2a';
+              exit.style.color = '#fff';
+            });
+
+
+            modalTitle.forEach(function(title) {
+              title.style.backgroundColor = '#323b2a';
+              title.style.color = '#fff';
+            });
+
+            modalContent.forEach(function(content) {
+              content.style.backgroundColor = '#323b2a';
+              content.style.color = '#fff';
+            });
+
+            modalBody.forEach(function(body) {
+              body.style.backgroundColor = '#323b2a';
+              body.style.color = '#fff';
+            });
+
+            modalPart.forEach(function(part) {
+              part.style.backgroundColor = '#323b2a';
+              part.style.color = '#fff';
+            });
+
+            fontcol.forEach(function(Color) {
+              Color.style.color = '#fff';
+            });
+           
+
+           
+            
+        
+      
+
+          } else {
+            // Dark mode is inactive: revert styles to default
+         
+            
+            close.forEach(function(exit) {
+              exit.style.backgroundColor = '';
+              exit.style.color = '#0d0d0d';
+            });
+
+            word.forEach(function(sen) {
+              sen.style.color = '';
+            });
+
+
+            modalTitle.forEach(function(title) {
+              title.style.backgroundColor = '';
+              title.style.color = '#0d0d0d';
+            });
+
+            modalContent.forEach(function(content) {
+              content.style.backgroundColor = '';
+              content.style.color = '#0d0d0d';
+            });
+
+            modalBody.forEach(function(body) {
+              body.style.backgroundColor = '';
+              body.style.color = '#0d0d0d';
+            });
+
+            modalPart.forEach(function(part) {
+              part.style.backgroundColor = '';
+              part.style.color = '#0d0d0d';
+            });
+
+
+            section.style.backgroundColor = '';
+            section2.style.backgroundColor = '';
+            fontcol.forEach(function(Color) {
+              Color.style.color = 'black';
+            });
+            
+
+          }
+        }
+  
+        var darkModeToggle = document.getElementById('dark-change');
+         // Event listener for dark mode toggl
+         darkModeToggle.addEventListener('click', function() {
+
+            darkModeToggle.classList.toggle('active');
+            var isDark = darkModeToggle.classList.contains('active');
+            localStorage.setItem('isDark', isDark);
+            toggleDarkMode();
+
+        });
+
+        // On page load, check local storage for dark mode preference
+        document.addEventListener('DOMContentLoaded', function() {
+            var isDark = localStorage.getItem('isDark') === 'true';
+            if (isDark) {
+                darkModeToggle.classList.add('active');
+                
+            }
+            toggleDarkMode(); 
+        });
+  
+  
+        </script>
+
+<script>
+  // Function to mark button1 as clicked in localStorage
+  function markButton1Clicked() {
+      let DataisThere2 = localStorage.getItem('button2Enabled');
+      let DataisThere3 = localStorage.getItem('button3Enabled');
+      if(!DataisThere2 && !DataisThere3){
+          localStorage.setItem('modcheck1', true);
+      }
+  }
+</script>
+
+			<script src="./js/main.js"></script>
+</body>
+</html>

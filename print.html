@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #printable-content {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        @media print {
+        body * {
+            visibility: hidden;
+        }
+        #printable-content, #printable-content * {
+            visibility: visible;
+        }
+    }
+    </style>
+    </head>
+    <body>
+        <div id="printable-content">
+            <h1>Assessment Results</h1>
+            <div id="user-info">
+                <p><strong>Name:</strong> <span id="user-name"></span></p>
+            </div>
+            <div id="final-assessment">
+                <div id="user-answers-section">
+                    <h2>User Answers:</h2>
+                    <ul id="user-answers"></ul>
+                </div>
+                <h2>Final Assessment Score:</h2>
+                <p id="final-score"></p>
+                <h2>User Explanation for Final Assessment:</h2>
+                <p id="final-explanation"></p>
+            </div>
+            <div id="activity-a">
+                <h2>Activity 1 Results</h2>
+                <h3>Correct Guesses:</h3>
+                <p id="total-score-a"></p>
+                <h3>Answers:</h3>
+                <p id="user-explanation-b"></p>
+            </div>
+            <div id="activity-b">
+                <h2>Activity 2 Results</h2>
+                <h3>Correct Guesses:</h3>
+                <p id="total-score-b"></p>
+                <h3>Answers:</h3>
+                <p id="user-explanation-a"></p>
+            </div>
+            <div id="venn-diagram">
+                <h2>Venn Diagram Quiz Results</h2>
+                <h3>Biotic Explanation:</h3>
+                <p id="venn-biotic"></p>
+                <h3>Similarity Explanation:</h3>
+                <p id="venn-similarity"></p>
+                <h3>Abiotic Explanation:</h3>
+                <p id="venn-abiotic"></p>
+            </div>
+        </div>
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Retrieve data from localStorage
+            var userName = localStorage.getItem('name');
+            var finalScore = localStorage.getItem('Fscore');
+            var finalExplanation = localStorage.getItem('userExplanationB');
+            var totalScoreA = localStorage.getItem('totalScoreA');
+            var userExplanationA = localStorage.getItem('userExplanationA');
+            var totalScoreB = localStorage.getItem('totalScoreB');
+            var userExplanationB = localStorage.getItem('userExplanationB');
+            var vennBiotic = localStorage.getItem('VENNExplanationB');
+            var vennSimilarity = localStorage.getItem('VENNExplanationS');
+            var vennAbiotic = localStorage.getItem('VENNExplanationA');
+
+            var userAnswers = [];
+            for (let i = 0; i < quizData.length; i++) {
+                userAnswers.push(localStorage.getItem(`n${i + 1}`));
+            }
+            
+            // Display user answers
+            var userAnswersElement = document.getElementById('user-answers');
+            for (let i = 0; i < userAnswers.length; i++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = `Question ${i + 1}: ${userAnswers[i]}`;
+                userAnswersElement.appendChild(listItem);
+            }
+    
+        
+            // Display data on the page
+            document.getElementById('user-name').textContent = userName;
+            document.getElementById('final-score').textContent = finalScore.trim() + "/10";
+            document.getElementById('final-explanation').textContent = finalExplanation;
+            document.getElementById('total-score-a').textContent = totalScoreA;
+            document.getElementById('user-explanation-a').textContent = userExplanationA;
+            document.getElementById('total-score-b').textContent = totalScoreB;
+            document.getElementById('user-explanation-b').textContent = userExplanationB;
+            document.getElementById('venn-biotic').textContent = vennBiotic;
+            document.getElementById('venn-similarity').textContent = vennSimilarity;
+            document.getElementById('venn-abiotic').textContent = vennAbiotic;
+
+
+            // Print the page
+        window.print();
+
+        // Function to execute after printing is finished
+        function afterPrint() {
+            // Go back to the previous website
+            window.history.back();
+        }
+
+        // Listen for the afterprint event to trigger the function after printing is done
+        if (window.matchMedia) {
+            var mediaQueryList = window.matchMedia('print');
+            mediaQueryList.addListener(function(mql) {
+                if (!mql.matches) {
+                    afterPrint();
+                }
+            });
+        }
+
+        // For browsers that don't support the 'print' media query
+        window.onafterprint = afterPrint;
+        });
+        </script>
+
+   
+    
+    <script src="quiz.js"></script>
+</body>
+</html>
